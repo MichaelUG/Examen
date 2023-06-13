@@ -1,0 +1,21 @@
+<ion-item>
+  <ion-avatar slot="start">
+    <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+  </ion-avatar>
+  <ion-label>Michael Bruce Pacheco Cisneros</ion-label>
+</ion-item>
+<ion-button> Ingresar </ion-button> 
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary">Componentes</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let c of componentes" [routerLink]="c.redirectTo" detail>
+      <ion-icon [name]="c.icon" slot="start" color="primary"></ion-icon>
+        {{c.name}}
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-button [disabled]="true"> Cerrar sesión </ion-button>
